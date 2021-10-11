@@ -1,6 +1,6 @@
 import yaml
 
-class Entity(yaml.YAMLObject):
+class Layer(yaml.YAMLObject):
     yaml_tag = u'!Layer'
 
     def __init__(self, layer, required):

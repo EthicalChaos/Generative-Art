@@ -1,4 +1,4 @@
-from entity import Entity
+from layer import Layer
 
 import yaml
 
@@ -15,7 +15,7 @@ def load_assets():
 
 def read_config():
     config = yaml.load(open("config.yaml"), Loader=yaml.FullLoader)
-    return [Entity(**data) for data in config['ASSETS']]
+    return [Layer(**data) for data in config['ASSETS']]
 
 def main():
     load_assets()
