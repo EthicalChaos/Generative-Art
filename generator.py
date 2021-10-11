@@ -9,7 +9,7 @@ def load_assets():
         assets = read_config()
     except:
         print("An exception occured reading the configuration file.")
-    finally:
+    else:
         print("Configuration successfully read.")
 
 
