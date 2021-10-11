@@ -3,8 +3,6 @@ from layer import Layer
 import yaml
 
 def load_assets():
-    PATH = 'assets'
-
     try:
         assets = read_config()
     except:
