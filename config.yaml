@@ -1,8 +1,8 @@
 ASSETS:
-  - entity: base
+  - layer: base
     required: True
-  - entity: eye
+  - layer: eye
     required: True
-  - entity: nose
+  - layer: nose
     required: False
 
