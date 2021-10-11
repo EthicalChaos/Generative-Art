@@ -1,0 +1,8 @@
+ASSETS:
+  - entity: base
+    required: True
+  - entity: eye
+    required: True
+  - entity: nose
+    required: False
+
