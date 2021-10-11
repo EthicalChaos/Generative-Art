@@ -15,5 +15,7 @@ class Layer(yaml.YAMLObject):
     
     def __repr__(self) -> str:
         return f"Layer type: {self.layer}, required: {self.required}, type{type(self.required)}"
-        
+
+    def variation_count(self):
+        return len(self.variations)
 

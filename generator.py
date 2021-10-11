@@ -9,6 +9,10 @@ def load_assets():
         print("An exception occured reading the configuration file.")
     else:
         print("Configuration successfully read.")
+        count = 1
+        for layer in assets:
+            count *= layer.variation_count()
+        print(f"Generating {count} variations")
 
 
 def read_config():
