@@ -48,9 +48,9 @@ def generate_variation_set():
 def generate_image(variation, file_name= None):
     bg = Image.open(variation[0])
 
-    # Loop through layers 1 to n and stack them on top of another
-    for filepath in variation[1:]:
-        img = Image.open(filepath)
+    # stack layers
+    for path in variation[1:]:
+        img = Image.open(path)
         bg.paste(img, (0,0), img)
     
     # Save the final image into desired location
