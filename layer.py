@@ -1,5 +1,8 @@
-import yaml
 import os
+import random
+
+import yaml
+
 
 class Layer(yaml.YAMLObject):
     yaml_tag = u'!Layer'
@@ -18,4 +21,8 @@ class Layer(yaml.YAMLObject):
 
     def variation_count(self):
         return len(self.variations)
+    
+    def get_random_varation(self):
+        random_index = random.randint(0, self.variation_count()-1)
+        return os.path.join(self.path, self.variations[random_index])
 
