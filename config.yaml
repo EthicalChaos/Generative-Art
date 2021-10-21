@@ -4,5 +4,5 @@ ASSETS:
   - layer: eye
     required: True
   - layer: nose
-    required: False
+    required: True
 
