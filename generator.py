@@ -46,7 +46,7 @@ def generate_variation_set():
 
     return varation_set
 
-def generate_image(variation, file_name= None):
+def generate_image(variation, output: str, file_name= None):
     bg = Image.open(variation[0])
 
     # stack layers
@@ -56,15 +56,15 @@ def generate_image(variation, file_name= None):
     
     # Save the final image into desired location
     if file_name is not None:
-        bg.save(os.path.join('out', file_name))
+        bg.save(os.path.join(output, file_name))
     else:
         # If output filename is not specified, use timestamp to name the image and save it in output/single_images
         if not os.path.exists(os.path.join('output', 'single_images')):
             os.makedirs(os.path.join('output', 'single_images'))
         bg.save(os.path.join('output', 'single_images', str(int(time.time())) + '.png'))
 
-def generate_collection(name: str, amount: int):
-    output = os.path.join('out', name)
+def generate_collection(collection_name: str, amount: int):
+    output = os.path.join('out', collection_name)
     if not os.path.exists(output):
         os.makedirs(output)
     
@@ -75,7 +75,7 @@ def generate_collection(name: str, amount: int):
         varaition_set = generate_variation_set()
         print(f"varation:{varaition_set}")
 
-        generate_image(varaition_set, file_name)
+        generate_image(varaition_set, output, file_name)
 
 
 def main():
