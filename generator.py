@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-import time
 import os
+import time
 
 import yaml
 from PIL import Image
